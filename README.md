@@ -121,16 +121,16 @@ Reimbursements are to be one of the following types:
 
 ## Milestones
 
-#### 07Feb2022
+#### 25Aug2022
 - Project requirements delivered
 
-#### 14Feb2022
+#### 29Aug2022
 - Remote repository is created and is being kept up to date
 - Core model classes are created
 - Registration/Authentication/User operations in progress
 - Rudimentary logging (to file) in place
 
-#### 21Feb2022
+#### 1Sept2022
 - Local DB instance running
 - App to DB connection made
 - Specified tables created with proper constraints
@@ -139,7 +139,7 @@ Reimbursements are to be one of the following types:
 - Basic persistence layer operations in progress
 - Testing of business logic is in progress
 
-#### 28Feb2022
+#### 05Sept2022
 - Reimbursement operations complete (pending PRISM integration)
 - PRISM integration in progress
 - Registration/Authentication web endpoints are accessible and functional
@@ -147,5 +147,5 @@ Reimbursements are to be one of the following types:
 - User passwords are encrypted when persisted to the DB
 - Testing of business logic is in progress
 
-#### 04Mar2022
+#### 08Sept2022
 - Project Presentations
