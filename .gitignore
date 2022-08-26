@@ -24,6 +24,8 @@ hs_err_pid*
 
 *.idea/
 *out/
-*.iml
+
 *target/
+*.properties
+*.iml
 *.DS_Store
