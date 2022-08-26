@@ -78,10 +78,8 @@ Reimbursements are to be one of the following types:
 
 | Requirement                                                                                       | Functional/Non-Functional | Value |
 |---------------------------------------------------------------------------------------------------|---------------------------|-------|
-| The system will register itself with the 3rd-party PRISM application                              | Functional                | 5     |
 | An new employee or new finance manager can request registration with the system                   | Functional                | 10    |
 | An admin user can approve or deny new registration requests                                       | Functional                | 5     |
-| The system will register the user's information with the PRISM application for payment processing | Functional                | 5     |
 | A registered employee can authenticate with the system by providing valid credentials             | Functional                | 10    |
 | An authenticated employee can view and manage their pending reimbursement requests                | Functional                | 10    |
 | An authenticated employee can view their reimbursement request history (sortable and filterable)  | Functional                | 10    |
@@ -89,7 +87,6 @@ Reimbursements are to be one of the following types:
 | An authenticated finance manager can view a list of all pending reimbursement requests            | Functional                | 10    |
 | An authenticated finance manager can view a history of requests that they have approved/denied    | Functional                | 10    |
 | An authenticated finance manager can approve/deny reimbursement requests                          | Functional                | 10    |
-| The system will send a payment request to PRISM when a reimbursement request is approved          | Functional                | 5     |
 | An admin user can deactivate user accounts, making them unable to log into the system             | Functional                | 5     |
 | An admin user can reset a registered user's password                                              | Functional                | 5     |
 | Basic validation is enforced to ensure that invalid/improper data is not persisted                | Non-Functional            | 10    |
@@ -128,7 +125,6 @@ Reimbursements are to be one of the following types:
 - Remote repository is created and is being kept up to date
 - Core model classes are created
 - Registration/Authentication/User operations in progress
-- Rudimentary logging (to file) in place
 
 #### 1Sept2022
 - Local DB instance running
@@ -140,12 +136,10 @@ Reimbursements are to be one of the following types:
 - Testing of business logic is in progress
 
 #### 05Sept2022
-- Reimbursement operations complete (pending PRISM integration)
-- PRISM integration in progress
 - Registration/Authentication web endpoints are accessible and functional
 - Reimbursement web endpoints are accessible and functional
 - User passwords are encrypted when persisted to the DB
 - Testing of business logic is in progress
 
-#### 08Sept2022
+#### 07Sept2022
 - Project Presentations
