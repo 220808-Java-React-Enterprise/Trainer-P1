@@ -20,7 +20,7 @@ public class ContextLoaderListener implements ServletContextListener {
 
         /* Dependency Injection */
         TestServlet testServlet = new TestServlet();
-        UserServlet userServlet = new UserServlet(mapper, new UserService(new UserDAO()));
+        UserServlet userServlet = new UserServlet(mapper, new TokenService(new JwtConfig()), new UserService(new UserDAO()));
         AuthServlet authServlet = new AuthServlet(mapper, new TokenService(new JwtConfig()), new UserService(new UserDAO()));
 
         /* Need ServletContext class to map whatever servlet to url path. */
