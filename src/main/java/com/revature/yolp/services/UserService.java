@@ -10,6 +10,7 @@ import com.revature.yolp.utils.custom_exceptions.InvalidRequestException;
 import com.revature.yolp.utils.custom_exceptions.InvalidUserException;
 import com.revature.yolp.utils.custom_exceptions.ResourceConflictException;
 
+import java.util.List;
 import java.util.UUID;
 
 public class UserService {
@@ -44,6 +45,15 @@ public class UserService {
 
     public User getUserById(String id) {
         return userDAO.getById(id);
+    }
+
+    public User getUserByUsername(String username) {
+        if (userDAO.getUserByUsername(username) == null) throw new InvalidRequestException("\nInvalid request! There is no user by that username");
+        return userDAO.getUserByUsername(username);
+    }
+
+    public List<User> getAllUsers() {
+        return userDAO.getAll();
     }
 
     public boolean isValidUsername(String username) {

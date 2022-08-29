@@ -8,6 +8,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class UserDAO implements CrudDAO<User> {
@@ -54,9 +55,42 @@ public class UserDAO implements CrudDAO<User> {
         return null;
     }
 
+    public User getUserByUsername(String username) {
+        try (Connection con = ConnectionFactory.getInstance().getConnection()) {
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users WHERE username = ?");
+            ps.setString(1, username);
+            ResultSet rs = ps.executeQuery();
+
+            if (rs.next()) {
+                return new User(rs.getString("id"), rs.getString("username"), rs.getString("password"), rs.getString("role"));
+            }
+
+        } catch (SQLException e) {
+            throw new InvalidSQLException("An error occurred when tyring to save to the database.");
+        }
+
+        return null;
+    }
+
+
     @Override
     public List<User> getAll() {
-        return null;
+        List<User> userList = new ArrayList<>();
+
+        try (Connection con = ConnectionFactory.getInstance().getConnection()) {
+            PreparedStatement ps = con.prepareStatement("SELECT * FROM users");
+            ResultSet rs = ps.executeQuery();
+
+            while (rs.next()) {
+                User user = new User(rs.getString("id"), rs.getString("username"), rs.getString("password"), rs.getString("role"));
+                userList.add(user);
+            }
+
+        } catch (SQLException e) {
+            throw new InvalidSQLException("An error occurred when tyring to save to the database.");
+        }
+
+        return userList;
     }
 
     public String getUsername(String username) {
