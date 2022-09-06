@@ -60,16 +60,12 @@ Reimbursements are to be one of the following types:
 - Errors and exceptions are handled properly and their details are obfuscated from the user
 - The system conforms to RESTful architecture constraints
 - The system's is tested with at least 80% line coverage in all service and utility classes
-- The system's data schema and component design is documented and diagrammed
 - The system keeps detailed logs on info, error, and fatal events that occur
 
 ### Suggested Bonus Features
 - Authenticated employees are able to upload an receipt image along with their reimbursement request
-- The system notifies the user of changes to their account registration status by email
-- The system notifies the user of changes to their reimbursement request status by email
-- Document your API using a tool like OpenAPI/Swagger
 - Run your application within a Docker container
-- Automate builds using GitHub Actions
+- Automate builds using Jenkins
 
 ## Scoring and Milestones
 
