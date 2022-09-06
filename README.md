@@ -48,7 +48,6 @@ Reimbursements are to be one of the following types:
 - An authenticated finance manager can view a list of all pending reimbursement requests
 - An authenticated finance manager can view a history of requests that they have approved/denied
 - An authenticated finance manager can approve/deny reimbursement requests
-- The system will send a payment request when a reimbursement request is approved
 - An admin user can deactivate user accounts, making them unable to log into the system
 - An admin user can reset a registered user's password
 
